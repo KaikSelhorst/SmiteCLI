@@ -24,7 +24,9 @@ function makeBuild() {
       .querySelectorAll(elementQuery);
     const itemsText = [];
     for (let i = 0; i < items.length; i++) {
-      itemsText.push(items[i].ariaLabel.replace("Icon", "").trim());
+      let item = `0${i + 1} - ${items[i].ariaLabel}`;
+      item = item.replace("Icon", "").trim();
+      itemsText.push(item);
     }
     return itemsText;
   };

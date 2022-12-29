@@ -3,15 +3,18 @@
 const yargs = require("yargs");
 const utils = require("./utils.js");
 const build = require("./build.js");
+const chalk = require("chalk");
 
-const usage =
-  "\n\nUsage:  smite <god-name> starts a search for a build.\n\tEx: smite Xing-Tian";
+const usage = chalk.hex("#E54")(
+  "\n\nUsage:  smite <god-name> starts a search for a build.\n\tEx: smite Xing-Tian"
+);
 const options = yargs
   .usage(usage)
   .option("b", {
     alias: "base",
     describe: "List all Smite gods",
     demandOption: false,
+    boolean: true,
   })
   .help(true).argv;
 
