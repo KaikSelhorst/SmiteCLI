@@ -1,0 +1,23 @@
+{
+  "name": "smite-cli",
+  "version": "1.0.0",
+  "description": "Search build for smite god!",
+  "main": "./bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "smite": "./bin/index.js"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "Koorst",
+  "license": "ISC",
+  "dependencies": {
+    "boxen": "^7.0.1",
+    "chalk": "^5.2.0",
+    "puppeteer": "^19.4.1",
+    "yargs": "^17.6.2"
+  }
+}
