@@ -26,15 +26,23 @@ const build = {
     return `\n${title}\n\n${relicsT}:\n${relics}${ItemsT}:\n${items}`;
   },
   showBuilds(builds) {
-    const buildsStrings = [];
-    for (let i = 0; i < builds.length; i++) {
-      const activeBuild = builds[i];
-      const buildString = build.showBuild(activeBuild);
-      buildsStrings.push(buildString);
+    if (builds.length) {
+      const buildsStrings = [];
+      for (let i = 0; i < builds.length; i++) {
+        const activeBuild = builds[i];
+        const buildString = build.showBuild(activeBuild);
+        buildsStrings.push(buildString);
+      }
+      buildsStrings.push("");
+      buildsStrings.unshift("");
+      console.log(buildsStrings.join(`${"".padStart(56, "-")}`));
+    } else {
+      console.log(
+        `\n${chalk.hex("#E54")(
+          "This name does not exist on the base date please enter the following command:"
+        )} \n$ ${chalk.hex("#83aaff")("smite -b")}\n`
+      );
     }
-    buildsStrings.push("");
-    buildsStrings.unshift("");
-    console.log(buildsStrings.join(`${"".padStart(56, "-")}`));
   },
 };
 
