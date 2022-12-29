@@ -21,9 +21,6 @@ $ npm install -g        # to install the CLI
 ```bash
 # run this command
 $ smite <god-name>
-
-# compound names are written like
-# this Xing-Tian
 ```
 
 #### Linux
@@ -45,6 +42,9 @@ $ PATH="./node_modules/.bin:$PATH"
 Some commands to help you!
 
 ```bash
+# Search build for smite god
+$ smite <god-name>  # God's name should always be written
+                    # like this: Xing Tian => Xing-Tian
 
 # list all gods in smite
 $ smite -b      # or smite --base
