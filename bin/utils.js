@@ -140,7 +140,7 @@ const utils = {
     while (arr.length > 0) {
       newArr.push(...arr.splice(0, 5), "\n");
     }
-    console.log("\nCurrent god of smite are these:\n");
+    console.log(chalk.hex("#E54")("\nCurrent god of smite are these:\n"));
     console.log(newArr.join(""));
   },
 };
