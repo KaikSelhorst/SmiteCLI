@@ -48,7 +48,8 @@ $ smite <god-name>  # God's name should always be written
 
 # list all gods in smite
 $ smite -b      # or smite --base
-
+# returns a screenshot of the build
+$ smite <godname> -s # or smite <godname> --screenshot
 #list all commands in Smite CLI
 $ smite --help
 ```
