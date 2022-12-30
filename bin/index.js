@@ -16,7 +16,17 @@ const options = yargs
     demandOption: false,
     boolean: true,
   })
+  .option("s", {
+    alias: "screenshot",
+    desc: "will make a screeshot of the build",
+    demandOption: false,
+    boolean: true,
+  })
   .help(true).argv;
+
+const options_argv = {
+  screenshot: yargs.argv.s,
+};
 
 // Show data base gods
 if (yargs.argv.b == true || yargs.argv.base == true) {
@@ -32,7 +42,7 @@ if (yargs.argv._[0] == null) {
 
 if (yargs.argv._[0]) {
   (async () => {
-    const builds = await build.init(yargs.argv._[0]);
+    const builds = await build.init(yargs.argv._[0], options_argv);
     build.showBuilds(builds);
   })();
 }

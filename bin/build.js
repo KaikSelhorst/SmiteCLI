@@ -2,17 +2,23 @@ const helpers = require("./helpers.js");
 const makeBuild = require("./makeBuild.js");
 const puppeteer = require("puppeteer");
 const chalk = require("chalk");
+const { exec } = require("child_process");
 
 const build = {
-  async init(god) {
+  async init(god, options) {
     const godName = helpers.toCaptalize(god, true);
     const url = `https://smitesource.com/gods/${godName}`;
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     page.setDefaultNavigationTimeout(0);
-
     await page.goto(url);
     const builds = await page.evaluate(makeBuild);
+    if (options.screenshot) {
+      await page.$eval(".v-slide-group__content", helpers.scrollToElement);
+      await new Promise((e) => setTimeout(e, 1000));
+      await page.screenshot({ path: "screenshot.png" });
+      exec("screenshot.png");
+    }
     await browser.close();
     return builds;
   },

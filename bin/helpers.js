@@ -30,5 +30,13 @@ const helpers = {
     }
     return newArr.join("");
   },
+  scrollToElement(element) {
+    const { y: top } = element.getBoundingClientRect();
+    window.scrollTo({
+      top: top,
+    });
+
+    return top;
+  },
 };
 module.exports = helpers;

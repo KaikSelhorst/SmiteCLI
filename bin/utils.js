@@ -5,11 +5,14 @@ const utils = {
     const usage = chalk.hex("#E54")(
       "\n\nUsage:  smite <god-name> starts a search for a build.\n\tEx: smite Xing-Tian"
     );
-    const version = `\t--version\tShow version number.\t\t[boolean]\r`;
-    const base = `    -b, --base\t\tList all Smite gods.\t\t[boolean]\r`;
-    const help = `\t--help\t\tShow help.\t\t\t[boolean]\r`;
+    const version = `\t--version\tShow version number.\t\t\t\t[boolean]\r`;
+    const base = `    -b, --base\t\tList all Smite gods.\t\t\t\t[boolean]\r`;
+    const screenshot = `    -s, --screenshot\twill make a screeshot of the build\t\t[boolean]\r`;
+    const help = `\t--help\t\tShow help.\t\t\t\t\t[boolean]\r`;
 
-    console.log(`${usage}\nOptions:\r\n${version}\n${base}\n${help}`);
+    console.log(
+      `${usage}\nOptions:\r\n${version}\n${base}\n${screenshot}\n${help}`
+    );
   },
   base() {
     const arr = [
