@@ -136,7 +136,7 @@ const utils = {
     for (let i = 0; i < arr.length; i++) {
       arr[i] = arr[i].replace(" ", "-").padEnd(15, " ");
     }
-
+    arr.sort();
     while (arr.length > 0) {
       newArr.push(...arr.splice(0, 5), "\n");
     }
