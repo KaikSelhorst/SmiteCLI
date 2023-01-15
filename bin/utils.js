@@ -146,6 +146,13 @@ const utils = {
     console.log(chalk.hex("#E54")("\nCurrent god of smite are these:\n"));
     console.log(newArr.join(""));
   },
+  showError() {
+    console.log(
+      `\n${chalk.hex("#E54")(
+        "This name does not exist on the base date please enter the following command:"
+      )} \n$ ${chalk.hex("#83aaff")("smite -b")}\n`
+    );
+  },
 };
 
 module.exports = utils;

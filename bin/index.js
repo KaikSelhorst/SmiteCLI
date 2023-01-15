@@ -43,6 +43,10 @@ if (yargs.argv._[0] == null) {
 if (yargs.argv._[0]) {
   (async () => {
     const builds = await build.init(yargs.argv._[0], options_argv);
-    build.showBuilds(builds);
+    if (builds && builds instanceof Array && builds.length) {
+      build.showBuilds(builds);
+    } else utils.showError();
+    console.log("Search Build Finish!!");
+    process.exit();
   })();
 }
