@@ -1,26 +1,23 @@
 # Smite Build CLI
 
-Smite CLI is a command-line interface made for searching for builds for the gods of smite.
+SmiteCLI is a command line interface for Smite, which is an online arena game. SmiteCLI allows users to search for the best in-game god builds, quickly and easily displaying the recommended builds for all gods in Smite. SmiteCLI helps make building your team easier, saving time and effort along the way. SmiteCLI can help even the most novice players find the perfect god builds.
 
-### Prerequisites
-
-- **Node.js**
+### Install
 
 ```bash
 # Clone the repository and then navigate to it.
+git clone https://github.com/KaikSelhorst/SmiteCLI.git
 
-# Runs the commands on your terminal
+# Enter in SmiteCLI folder
 
 $ npm install           # to install the dependencies.
-
 $ npm install -g        # to install the CLI
 ```
+### Basic usage
 
-#### Windows
 
 ```bash
-# run this command
-$ smite <god-name>
+smite <god-name>
 ```
 
 #### Linux
@@ -39,7 +36,7 @@ $ PATH="./node_modules/.bin:$PATH"
 # Now you are good to go and can use the CLI globally!
 ```
 
-Some commands to help you!
+### --help
 
 ```bash
 # Search build for smite god
@@ -55,6 +52,12 @@ $ smite <godname> -s      # or smite <godname> --screenshot
 #list all commands in Smite CLI
 $ smite --help
 ```
+
+### Tech Stack
+
+- [Chalk](https://www.npmjs.com/package/chalk) - Terminal string styling done right.
+- [Puppeteer](https://www.npmjs.com/package/puppeteer) - Headless Chrome Node.js API.
+- [Yargs](https://www.npmjs.com/package/yargs) - Yargs the modern, pirate-themed successor to optimist.
 
 #### Where information is being withdrawn
 
