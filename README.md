@@ -67,7 +67,7 @@ Case wanted to see the builds that appear in the CLI [click here](https://smites
 
 ### License
 
-Koorst © 2021 - 22 // Some reserved rights.
+Selhorst © 2023 // Some reserved rights.
 
 ### Contact
 
